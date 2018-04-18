@@ -6,7 +6,7 @@ var vRViewPlayer = function(elementIdName, options) {
 var drawingRoom = vRViewPlayer('#first-vr-example', {
   // image: 'assets/dolphins.jpg',
   image: 'https://raw.githubusercontent.com/jsala1990/thelare_webvr_tutorial/master/public/assets/example-rectangular-room.png',
-  is_stereo: true,
+  is_stereo: false,
 });
 
 window.addEventListener('load', drawingRoom);
