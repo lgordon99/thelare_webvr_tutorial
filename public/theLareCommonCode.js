@@ -10,4 +10,19 @@ var drawingRoom = vRViewPlayer('#first-vr-example', {
 });
 
 window.addEventListener('load', drawingRoom);
-// Delete lines 14 through 28
+
+var roomDrawing = vRViewPlayer('#second-vr-example', {
+  // image: 'assets/guillermo-room.jpg',
+  image: 'https://raw.githubusercontent.com/jsala1990/thelare_webvr_tutorial/master/public/assets/hand-drawn-room.jpg',
+  is_stereo: false,
+});
+
+window.addEventListener('load', roomDrawing);
+
+var boxRoomTemplate = vRViewPlayer('#third-vr-example', {
+  // image: 'assets/example-rectangular-room.png',
+  image: 'https://raw.githubusercontent.com/jsala1990/thelare_webvr_tutorial/master/public/assets/example-rectangular-room.png',
+  is_stereo: false,
+});
+
+window.addEventListener('load', boxRoomTemplate);
