@@ -11,56 +11,18 @@ var drawingRoom = vRViewPlayer('#first-vr-example', {
 
 window.addEventListener('load', drawingRoom);
 
-var setReadyEvents = function(event) {
-  console.log('adding on "ready" events');
-
-  drawingRoom.addHotspot('spot1', {
-    pitch: -10,
-    yaw: -30,
-    radius: 0.10,
-    distance: 1
-  });
-
-  drawingRoom.addHotspot('spot2', {
-    pitch: 89,
-    yaw: -100,
-    radius: 0.10,
-    distance: 1
-  });
-
-  drawingRoom.addHotspot('spot3', {
-    pitch: 0,
-    yaw: -150,
-    radius: 0.10,
-    distance: 1
-  });
-};
-
-var setOnClickEvents = function(event) {
-  if (event.id == 'spot1') {
-    alert("Spot1")
-  }
-
-  if (event.id == 'spot2') {
-    alert('Spot2');
-  }
-
-  if (event.id == 'spot3') {
-    alert(' ?? ');
-  }
-};
-
-// when the page is ready, do these events
-drawingRoom.on('ready', function(event) {
-  setReadyEvents(event);
+var roomDrawing = vRViewPlayer('#second-vr-example', {
+  // image: 'assets/guillermo-room.jpg',
+  image: 'https://raw.githubusercontent.com/jsala1990/thelare_webvr_tutorial/master/public/assets/hand-drawn-room.jpg',
+  is_stereo: false,
 });
 
-// when you click, do these events
-drawingRoom.on('click', function(event) {
-  setOnClickEvents(event);
+window.addEventListener('load', roomDrawing);
+
+var boxRoomTemplate = vRViewPlayer('#third-vr-example', {
+  // image: 'assets/example-rectangular-room.png',
+  image: 'https://raw.githubusercontent.com/jsala1990/thelare_webvr_tutorial/master/public/assets/example-rectangular-room.png',
+  is_stereo: false,
 });
 
-// when there is an error, do these events
-drawingRoom.on('error', function(errorEvent) {
-  console.log('there was an error', errorEvent);
-});
+window.addEventListener('load', boxRoomTemplate);
