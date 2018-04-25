@@ -1,21 +1,21 @@
 var setReadyEvents = function(event) {
   console.log('adding on "ready" events');
 
-  vrHomePage.addHotspot('spot1', {
+  drawingRoom.addHotspot('spot1', {
     pitch: -10,
     yaw: -30,
     radius: 0.10,
     distance: 1
   });
 
-  vrHomePage.addHotspot('spot2', {
+  drawingRoom.addHotspot('spot2', {
     pitch: 89,
     yaw: -100,
     radius: 0.10,
     distance: 1
   });
 
-  vrHomePage.addHotspot('spot3', {
+  drawingRoom.addHotspot('spot3', {
     pitch: 0,
     yaw: -150,
     radius: 0.10,
@@ -38,16 +38,16 @@ var setOnClickEvents = function(event) {
 };
 
 // when the page is ready, do these events
-vrHomePage.on('ready', function(event) {
+drawingRoom.on('ready', function(event) {
   setReadyEvents(event);
 });
 
 // when you click, do these events
-vrHomePage.on('click', function(event) {
+drawingRoom.on('click', function(event) {
   setOnClickEvents(event);
 });
 
 // when there is an error, do these events
-vrHomePage.on('error', function(errorEvent) {
+drawingRoom.on('error', function(errorEvent) {
   console.log('there was an error', errorEvent);
 });
