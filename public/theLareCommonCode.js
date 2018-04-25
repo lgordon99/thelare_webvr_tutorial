@@ -14,22 +14,22 @@ var setReadyEvents = function(event) {
   console.log('adding on "ready" events');
 
   drawingRoom.addHotspot('spot1', {
-    pitch: -10,
-    yaw: -30,
+    pitch: 0,
+    yaw: 0,
     radius: 0.05,
-    distance: 1
+    distance: 10
   });
 
   drawingRoom.addHotspot('spot2', {
-    pitch: 89,
-    yaw: -100,
+    pitch: 90,
+    yaw: 0,
     radius: 0.10,
     distance: 1
   });
 
   drawingRoom.addHotspot('spot3', {
     pitch: 0,
-    yaw: -150,
+    yaw: 180,
     radius: 0.15,
     distance: 1
   });
